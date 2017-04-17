@@ -4,17 +4,16 @@ import { EventsListComponent } from './events/events-list.component'
 @Component({
     selector: 'events-app',
     template: `
-        <h2>Hello World again again {{ user }} End</h2>
-        <events-list></events-list>        
+        <h2>EventsAppComponent</h2>
+        
+        <events-list></events-list>       
+
+        <parent-comp></parent-comp> 
         `
 })
 export class EventsAppComponent {
 
-@Input()
-user: string
+    constructor(){
 
-constructor(){
-    console.log('user = ' + this.user)
-}
-
+    }
 }

@@ -8,7 +8,6 @@ import { EventsAppComponent} from "../events-app.component"
                 <h1>Parent Comp</h1>            
                 <child-comp [parentDataInput]= "parentData"></child-comp>
 
-                <events-app></events-app>
             </div>`
 })
 export class ParentComponent {

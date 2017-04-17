@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core"
 import { BrowserModule } from '@angular/platform-browser'
 import { EventsAppComponent} from './events-app.component'
 import { EventsListComponent} from './events/events-list.component'
+import { EventThumbnailComponent} from './events/event-thumbnail.component'
+
 import { ParentComponent } from './parent-child/parent-comp'
 import { ChildComponent } from './parent-child/child-comp'
 
@@ -12,9 +14,10 @@ import { ChildComponent } from './parent-child/child-comp'
     declarations: [
         EventsAppComponent,
         EventsListComponent, 
+        EventThumbnailComponent, 
         ParentComponent, 
         ChildComponent] ,
-    bootstrap: [ParentComponent]
+    bootstrap: [EventsAppComponent]
 })
 export class AppModule {
 
