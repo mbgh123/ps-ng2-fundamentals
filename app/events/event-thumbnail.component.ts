@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { IEvent } from './models'
 
 @Component({
@@ -14,10 +14,18 @@ import { IEvent } from './models'
             <span>&nbsp;</span>
             <span>{{ event.location.city}}, {{ event.location.country}}</span>
         </div>
+        <button class="btn btn-primary" (click) = "handleClickMe()" >Button</button>
     </div>            
   `
 })
 export class EventThumbnailComponent{
     
     @Input() event: IEvent
+
+    @Output() eventChildClick = new EventEmitter()
+
+    handleClickMe(){
+        console.log('Clicked')
+        this.eventChildClick.emit( this.event.name )
+    }
 }

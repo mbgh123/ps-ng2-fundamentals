@@ -7,7 +7,7 @@ import { IEvent } from './models'
             <div>
             <h1>Upcoming events</h1>
             <hr>
-            <event-thumbnail [event]="event1"></event-thumbnail>   
+            <event-thumbnail [event]="event1" (eventChildClick)="handleEventclick($event)"></event-thumbnail>   
             <event-thumbnail [event]="event1"></event-thumbnail>                 
             </div>
     `
@@ -24,6 +24,10 @@ export class EventsListComponent {
             address: '1 street',
             city: 'London',
             country: 'england'
-        }
+        }        
+    }
+    
+    handleEventclick(data){
+            console.log('from child click: ' + data)
     }
 }
