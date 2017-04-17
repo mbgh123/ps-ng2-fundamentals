@@ -1,10 +1,14 @@
 import { Component, Input } from "@angular/core"
+import { EventsAppComponent} from "../events-app.component"
 
 @Component({
     selector: 'parent-comp',
     template: `
-            <div>Parent Comp
+            <div>
+                <h1>Parent Comp</h1>            
                 <child-comp [parentDataInput]= "parentData"></child-comp>
+
+                <events-app></events-app>
             </div>`
 })
 export class ParentComponent {
